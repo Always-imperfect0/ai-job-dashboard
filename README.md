@@ -1,91 +1,83 @@
 
 ---
-<p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/ai-job-dashboard/main/assets/banner.png" width="900"/>
-</p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python">
-  <img src="https://img.shields.io/badge/FastAPI-API-green?logo=fastapi">
-  <img src="https://img.shields.io/badge/Streamlit-Dashboard-ff4b4b?logo=streamlit">
-  <img src="https://img.shields.io/badge/FAISS-Semantic_Search-orange">
-  <img src="https://img.shields.io/badge/Celery-Workers-4BC51D?logo=celery">
-  <img src="https://img.shields.io/badge/Postgres-DB-336791?logo=postgresql">
-  <img src="https://img.shields.io/badge/Redis-Queue-red?logo=redis">
-  <img src="https://img.shields.io/badge/Docker-Production-2496ED?logo=docker">
-  <img src="https://github.com/YOUR_USERNAME/ai-job-dashboard/actions/workflows/ci.yml/badge.svg">
-</p>
-
-# 🚀 AI Job Dashboard – Intelligent Job Search Platform
+# AI Job Dashboard – Intelligent Job Search Platform
 
 Scraping • Resume Parsing • Skill Matching • Semantic Search • Streamlit • FastAPI • Celery • Redis • FAISS • Docker
 
-A production-grade **AI-powered job matching platform** that:
+A production-grade AI-powered job matching platform that:
 
-- Crawls job boards (Indeed, LinkedIn, RemoteOK, Naukri)
-- Parses resumes & extracts skills
-- Computes similarity using **FAISS vector search**
-- Detects skill gaps & missing qualifications
-- Serves recommendations via **FastAPI**
-- Visualizes everything in a **Streamlit dashboard**
-- Runs pipelines asynchronously with **Celery + Redis**
-- Fully containerized with a **Docker Compose microservice architecture**
+* Crawls job boards (Indeed, LinkedIn, RemoteOK, Naukri)
+* Parses resumes and extracts skills
+* Computes similarity using FAISS vector search
+* Detects skill gaps and missing qualifications
+* Serves recommendations through FastAPI
+* Visualizes insights through a Streamlit dashboard
+* Runs background pipelines using Celery + Redis
+* Is fully containerized with a Docker Compose service architecture
 
-This project showcases **real ML engineering, backend development, ETL pipelines, and scalable AI system design**.
-
----
-
-# 🌟 Features
-
-### 🔍 **1. Web Scrapers**
-- Playwright + stealth mode
-- Rotating proxies
-- Clean job extraction → JSON → Database
-- Multi-site scraping (Indeed, LinkedIn, Naukri, RemoteOK)
-
-### 🧠 **2. Semantic Job Matching (FAISS)**
-- SentenceTransformers (`all-MiniLM-L6-v2`)
-- Cosine similarity search in milliseconds
-- Auto indexing + fast retrieval
-- Persistent database-backed metadata
-
-### 📄 **3. Resume Parsing & Skill Extraction**
-- spaCy NER
-- pdfplumber parsing
-- RapidFuzz for fuzzy skill detection
-- Skill-gap analysis
-
-### 📊 **4. Streamlit Dashboard**
-- Resume → Job match
-- Job explorer
-- FAISS similarity heatmaps
-- Skill visualizations
-
-### ⚙️ **5. FastAPI Backend**
-- `/search` – semantic job search  
-- `/ingest` – add new job postings  
-- `/health` – system health  
-
-### 🏭 **6. Celery Workers**
-- ETL pipelines  
-- Scraper scheduling  
-- Automatic FAISS rebuilds  
-- Background inference  
-
-### 🐳 **7. Production Docker Stack**
-- FastAPI
-- Streamlit
-- Redis
-- Postgres
-- Celery worker
-- Playwright-ready Python image
-- Nginx reverse proxy
+This project demonstrates real ML engineering, backend development, ETL pipelines, and scalable AI system design.
 
 ---
 
-# 🏗 Architecture Overview
+## Features
 
-```
+### 1. Web Scrapers
+
+* Playwright with stealth mode (anti-bot)
+* Proxy rotation support
+* Clean job extraction to structured JSON
+* Multi-site scraping support (Indeed, LinkedIn, Naukri, RemoteOK)
+
+### 2. Semantic Job Matching (FAISS)
+
+* SentenceTransformers (`all-MiniLM-L6-v2`)
+* Cosine similarity vector search in milliseconds
+* Persistent FAISS index + metadata
+* Automatic index rebuilds
+
+### 3. Resume Parsing and Skill Extraction
+
+* spaCy Named Entity Recognition
+* PDF parsing with pdfplumber
+* Fuzzy skill detection using RapidFuzz
+* Skill-gap analysis between resume and job requirements
+
+### 4. Streamlit Dashboard
+
+* Resume-to-job match scoring
+* Job exploration interface
+* Skill visualizations
+* Similarity heatmaps and analytics
+
+### 5. FastAPI Backend
+
+Endpoints:
+
+* `POST /ingest`: Add new job postings
+* `GET /search`: Semantic job search
+* `GET /health`: System health status
+
+### 6. Celery Workers
+
+* ETL pipelines
+* Scheduled scraping
+* Automatic FAISS index rebuilds
+* Background inference jobs
+
+### 7. Production-Ready Docker Stack
+
+* FastAPI service
+* Streamlit UI
+* Redis (task queue)
+* Postgres (database)
+* Celery (workers)
+* Nginx reverse proxy
+* Playwright-ready Python base image
+
+---
+
+## Architecture Overview
 
 ```
              ┌────────────────┐
@@ -115,70 +107,66 @@ This project showcases **real ML engineering, backend development, ETL pipelines
                └──────────┘
 ```
 
-```
-
 ---
 
-# 📦 Directory Structure
+## Directory Structure
 
 ```
-
 ai_job_dashboard/
 │
 ├── api/            # FastAPI endpoints
-├── scraper/        # Web scrapers (Playwright)
+├── scraper/        # Web scrapers using Playwright
 ├── ml/             # FAISS, embeddings, resume parser
-├── db/             # SQLAlchemy models
-├── workers/        # Celery tasks
-├── streamlit/      # Streamlit UI
+├── db/             # SQLAlchemy models, DB session
+├── workers/        # Celery task pipelines
+├── streamlit/      # Streamlit dashboard
 ├── utils/          # Logging, config, helpers
-├── docker/         # Nginx configs
+├── docker/         # Nginx configs and Docker assets
 ├── tests/          # Unit tests
 ├── models/         # Saved ML models (.gitkeep)
-└── data/           # Local index/cache (.gitkeep)
-
-````
+└── data/           # FAISS index, caches (.gitkeep)
+```
 
 ---
 
-# 🐳 Docker Setup
+## Docker Setup
 
-Start the entire system:
+Start the full production system:
 
 ```bash
 docker-compose up --build
-````
+```
 
-### Services:
+### Service URLs
 
-| Component     | URL                                            |
-| ------------- | ---------------------------------------------- |
-| **FastAPI**   | [http://localhost:8000](http://localhost:8000) |
-| **Streamlit** | [http://localhost:8501](http://localhost:8501) |
-| **Postgres**  | 5432                                           |
-| **Redis**     | 6379                                           |
+| Component | URL                                            |
+| --------- | ---------------------------------------------- |
+| FastAPI   | [http://localhost:8000](http://localhost:8000) |
+| Streamlit | [http://localhost:8501](http://localhost:8501) |
+| Postgres  | port 5432                                      |
+| Redis     | port 6379                                      |
 
 ---
 
-# 🧪 API Usage Examples
+## API Usage Examples
 
-### 🔎 Search
+### Semantic Search
 
 ```bash
 curl "http://localhost:8000/search?q=machine+learning"
 ```
 
-### 📥 Ingest Job
+### Ingest a Job Posting
 
 ```bash
 curl -X POST http://localhost:8000/ingest \
   -H "Content-Type: application/json" \
-  -d '{"title":"Data Scientist","description":"Python, SQL, ML","url":"https://"}'
+  -d '{"title":"Data Scientist","description":"Python, SQL, ML","url":"https://example.com"}'
 ```
 
 ---
 
-# 🧠 Python Examples
+## Python Examples
 
 ### FAISS Search
 
@@ -187,7 +175,7 @@ from ml.faiss_indexer import indexer
 indexer.search("python developer")
 ```
 
-### Resume Parser
+### Resume Parsing
 
 ```python
 from ml.resume_parser import parse_resume
@@ -196,7 +184,7 @@ parse_resume("resume.pdf")
 
 ---
 
-# 🛠 Installation (without Docker)
+## Installation (Without Docker)
 
 ```bash
 pip install -r requirements.txt
@@ -206,42 +194,45 @@ streamlit run streamlit/streamlit_app.py
 
 ---
 
-# 🚀 Deployment
+## Deployment
 
-### Recommended:
+### Recommended: Docker Compose
 
 ```bash
 docker-compose up --build -d
 ```
 
-### Cloud Ready For:
+### Cloud Compatible With:
 
 * Render
 * AWS ECS
 * GCP Cloud Run
 * Azure Container Apps
-* Railway + Docker
+* Railway (Docker deployment)
 
 ---
 
-# 🔮 Roadmap
+## Roadmap
 
-* [ ] LangChain-powered job Q&A
-* [ ] Global salary normalization
-* [ ] LinkedIn stealth-mode improvements
-* [ ] FAISS monitoring + Prometheus
-* [ ] Full CI/CD auto-deployment
-
----
-
-# 🤝 Contributing
-
-PRs welcome — add new scrapers, resume parsing models, and enhanced ML modules.
+* LangChain-powered job Q&A
+* Global salary normalization
+* Enhanced LinkedIn stealth scraping
+* FAISS monitoring with Prometheus
+* Fully automated CI/CD deployment pipeline
 
 ---
 
-# 🧑‍💻 Author
+## Contributing
+
+Pull requests are welcome.
+You can contribute new scrapers, resume parsing models, FAISS improvements, or new analytics modules.
+
+---
+
+## Author
 
 **Saniya Acharya**
+AI/ML Engineer • Backend Developer • Data Engineer
 
 ---
+
