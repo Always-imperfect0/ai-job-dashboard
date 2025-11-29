@@ -16,7 +16,7 @@
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
 
   <!-- GitHub Actions CI -->
-  <img src="https://github.com/YOUR_USERNAME/ai-job-dashboard/actions/workflows/ci.yml/badge.svg">
+  <img src="https://github.com/saniyaacharya04/ai-job-dashboard/actions/workflows/ci.yml/badge.svg">
 
 </p>
 
