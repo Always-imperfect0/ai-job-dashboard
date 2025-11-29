@@ -1,5 +1,24 @@
 
 ---
+<p align="center">
+
+  <!-- Language / Frameworks -->
+  <img src="https://img.shields.io/badge/Python-3.10-blue?logo=python">
+  <img src="https://img.shields.io/badge/FastAPI-API-green?logo=fastapi">
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-ff4b4b?logo=streamlit">
+  <img src="https://img.shields.io/badge/FAISS-Semantic_Search-orange">
+  <img src="https://img.shields.io/badge/Celery-Workers-4BC51D?logo=celery">
+  <img src="https://img.shields.io/badge/Postgres-DB-336791?logo=postgresql">
+  <img src="https://img.shields.io/badge/Redis-Queue-red?logo=redis">
+  <img src="https://img.shields.io/badge/Docker-Production-2496ED?logo=docker">
+
+  <!-- License -->
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+
+  <!-- GitHub Actions CI -->
+  <img src="https://github.com/YOUR_USERNAME/ai-job-dashboard/actions/workflows/ci.yml/badge.svg">
+
+</p>
 
 # AI Job Dashboard – Intelligent Job Search Platform
 
